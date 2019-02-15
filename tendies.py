@@ -1,9 +1,9 @@
 from lxml import html
 import requests
+import fileinput
 
 page = requests.get('http://dining.umd.edu/#specials')
 tree = html.fromstring(page.content)
-print("\nChecking Specials...\n")
 specials = tree.xpath('//*[@id="specials"]/div[1]/div[1]/div[3]/text()')
 i = 2
 done = False
@@ -20,7 +20,13 @@ while not done:
 
 day = day[:day.find('-')-1]
 
+message = ""
+
 if day != "":
-    print("Tendie day is " + day + "\n")
+    message = "Tendie day is " + day + "\n"
 else:
-    print("No tendies this week :(")
+    message = "No tendies this week :("
+
+f = open("index.html", "w+")
+for line in fileinput.input(f):
+    line.replace("Not today :(", message)
