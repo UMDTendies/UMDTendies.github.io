@@ -27,6 +27,8 @@ if day != "":
 else:
     message = "No tendies this week :("
 
-f = open("index.html", "w+")
-for line in fileinput.input(f):
-    line.replace("Not today :(", message)
+f = open("index.html", "w")
+
+f.write("<html> <head> <title>When Is Tendie Day?</title> </head> <body> <p>" + message + "</p> </body> </html>")
+
+f.close()
