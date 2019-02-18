@@ -30,5 +30,5 @@ else:
 f = open("index.html", "w")
 
 f.write("<html> <head> <title>When Is Tendie Day?</title> </head> <body> <p>" + message + "</p> </body> </html>")
-
+f.write("<html><head><link href=\"https://fonts.googleapis.com/css?family=Rubik+Mono+One|Montserrat\" rel=\"stylesheet\"/><link href=\"styles.css\" rel=\"stylesheet\"/><title>When Is Tendie Day?</title></head><body><div class=\"content\">" + message + "</div><div class=\"footer\">By BJG and JMT @ UMD - College Park</div></body></html>")
 f.close()
