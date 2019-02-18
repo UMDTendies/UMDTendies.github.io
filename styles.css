@@ -1,9 +1,21 @@
 body {
+   background-color: #b00;
+   color: #fff;
+}
+
+.content {
    text-align: center;
    padding: 250px 0;
    font-family: 'Rubik Mono One', sans-serif;
-   background-color: #b00;
-   color: white;
    font-size: 30px;
    letter-spacing: 10px;
 }
+
+.footer {
+   height: 80%;
+   text-align: center;
+   font-size: 12px;
+   font-family: 'Montserrat', sans-serif;
+   letter-spacing: 8px;
+}
+   
