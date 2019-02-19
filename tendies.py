@@ -23,7 +23,7 @@ day = day[:day.find('-')-1]
 message = ""
 
 if day != "":
-    message = "Tendie day is " + day + "\n"
+    message = "Tendie day is " + day
 else:
     message = "No tendies this week :("
 
