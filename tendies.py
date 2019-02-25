@@ -11,6 +11,8 @@ day = ""
 while not done: 
     oldSize = len(specials)
     specials += tree.xpath('//*[@id="specials"]/div[' + str(i) + ']/div[2]/div[3]/text()') 
+    if len(specials) == 0:
+        break;
     if "Chicken Tenders" in specials[len(specials)-1]:
        d = tree.xpath('//*[@id="specials"]/div[' + str(i) + ']/div[2]/div[2]/span/text()') 
        day = d[0]
@@ -29,5 +31,5 @@ else:
 
 f = open("index.html", "w")
 
-f.write("<html><head><link href=\"tendies.png\" rel=\"shortcut icon\" type=\"image/png\"/><link href=\"https://fonts.googleapis.com/css?family=Rubik+Mono+One|Montserrat\" rel=\"stylesheet\"/><link href=\"styles.css\" rel=\"stylesheet\"/><script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script><script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: \"ca-pub-1481537824954340\",enable_page_level_ads: true});</script><title>When Is Tendie Day?</title></head><body><div class=\"content\">" + message + "</div><div class=\"footer\">By BJG and JMT @ UMD - College Park Test 1</div></body></html>")
+f.write("<html><head><link href=\"tendies.png\" rel=\"shortcut icon\" type=\"image/png\"/><link href=\"https://fonts.googleapis.com/css?family=Rubik+Mono+One|Montserrat\" rel=\"stylesheet\"/><link href=\"styles.css\" rel=\"stylesheet\"/><script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script><script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: \"ca-pub-1481537824954340\",enable_page_level_ads: true});</script><title>When Is Tendie Day?</title></head><body><div class=\"content\">" + message + "</div><div class=\"footer\">By BJG and JMT @ UMD - College Park</div></body></html>")
 f.close()
