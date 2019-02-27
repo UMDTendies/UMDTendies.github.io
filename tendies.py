@@ -16,6 +16,7 @@ while not done:
     if "Chicken Tenders" in specials[len(specials)-1]:
        d = tree.xpath('//*[@id="specials"]/div[' + str(i) + ']/div[2]/div[2]/span/text()') 
        day = d[0]
+       done = True
     if len(specials) == oldSize:
         done = True
     i += 1
